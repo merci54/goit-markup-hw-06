@@ -1,7 +1,3 @@
-.hidden {
-    display: none;
-}
-
 /* #region Main */
 
 body {
@@ -99,6 +95,10 @@ textarea {
         max-width: 1158px;
         padding: 0 15px;
     }
+
+    .section {
+        padding: 120px 0;
+    }
 }
 
 
@@ -148,6 +148,10 @@ textarea {
 .burger-icon {
     display: block;
     fill: #2F2F37;
+}
+
+.address-item-link {
+    font-style: normal;
 }
 
 @media screen and (min-width: 768px) {
@@ -244,6 +248,7 @@ textarea {
 
     .address-item-link {
         font-size: 16px;
+        font-style: italic;
     }
 
     .address-item {
@@ -397,12 +402,53 @@ textarea {
 
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)),
-        url(../images/herobg.jpg);
+        url(../images/herobg-mob.jpg);
+
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     /* max-width: 320px; */
     margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) and (min-resolution: 2x) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/herobg-mob@2x.jpg);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/herobg-tablet.jpg);
+    }
+}
+
+@media screen and (min-width: 768px) and (min-resolution: 2x) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/herobg-tablet@2x.jpg);
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/herobg-desktop.jpg);
+    }
+}
+
+@media screen and (min-width: 1158px) and (min-resolution: 2x) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/herobg-desktop@2x.jpg);
+    }
 }
 
 .hero-title {
@@ -563,7 +609,6 @@ textarea {
 }
 
 /* #endregion About */
-
 
 /* #region Team */
 
@@ -927,7 +972,7 @@ textarea {
 
     .footer .container {
         column-gap: 24px;
-        padding-left: 108px;
+        max-width: 584px;
         justify-content: flex-start;
     }
 
@@ -955,10 +1000,14 @@ textarea {
 }
 
 @media screen and (min-width: 1158px) {
+    .footer {
+        padding: 100px 0;
+    }
 
     .footer .container {
+        max-width: 1158px;
+        padding: 0 15px;
         gap: 0;
-        padding-left: 0;
         align-items: baseline;
     }
 
