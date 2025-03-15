@@ -49,15 +49,15 @@
         </ul>
       </address>
 
-      <button class="burger-button" type="button">
+      <button class="burger-button" type="button" data-menu-open>
         <svg class="burger-icon" width="24" height="24">
           <use href="./images/icons.svg#icon-burger"></use>
         </svg>
       </button>
 
-      <div class="mobile-menu">
+      <div class="mobile-menu" data-menu>
         <div class="mobile-menu-container container">
-          <button class="mobile-menu-close">
+          <button class="mobile-menu-close" data-menu-close>
             <svg class="back-button-icon" width="8" height="8">
               <use href="./images/icons.svg#icon-back"></use>
             </svg>
@@ -121,7 +121,7 @@
     <section class="hero">
       <div class="container">
         <h1 class="hero-title">Effective Solutions for Your Business</h1>
-        <button class="hero-button" type="button">Order Service</button>
+        <button class="hero-button" type="button" data-modal-open>Order Service</button>
       </div>
     </section>
 
@@ -554,10 +554,10 @@
     </div>
   </footer>
 
-  <div class="modal-overlay">
+  <div class="modal-overlay" data-modal>
     <div class="modal">
       <button type="button" class="back-button">
-        <svg class="back-button-icon" width="8" height="8">
+        <svg class="back-button-icon" width="8" height="8" data-modal-close>
           <use href="./images/icons.svg#icon-back"></use>
         </svg>
       </button>
@@ -624,6 +624,8 @@
     </div>
   </div>
 
+  <script src="./js/modal.js"></script>
+  <script src="./js/menu.js"></script>
 </body>
 
 </html>
